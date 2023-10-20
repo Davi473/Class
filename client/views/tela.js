@@ -25,12 +25,10 @@ class Tela {
         for (const client of this.valoresClientes) {
             const trCliente = new Tr("clientes")
             new Celulas("th", client.cliente, trCliente.element, "clientes")
-            console.log(client.cliente)
             new Celulas("th", client.email, trCliente.element, "clientes")
             new Celulas("th", client.telefone, trCliente.element, "clientes")
             // Colocar botão de excluir
             table.element.appendChild(trCliente.element)
-
         }
         const body = document.getElementById("comeco")
         body.appendChild(divtabela.element)
