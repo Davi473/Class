@@ -12,10 +12,9 @@ class Tela {
         for (const valor of valores)[
             this.valoresClientes.push(valor)
         ];
-        console.log(this.valoresClientes);
         this.tabela();
     }
-
+    // terminar
     adicionarClientes() {
         const divAdicionar = new Div("adicionar")
         const tableadicionar = new Table()
@@ -33,14 +32,17 @@ class Tela {
             new Celulas("th", valor, valores.element, "clientes"); 
         };
         divtabela.element.appendChild(table.element);
-        
+        let valorExcluir = 0;
+        let valorButton = 0;
         for (const client of this.valoresClientes) {
-            const trCliente = new Tr("clientes");
+            const trCliente = new Tr("clientes", valorExcluir);
+            valorExcluir += 1;
             new Celulas("td", client.cliente, trCliente.element, "clientes");
             new Celulas("td", client.email, trCliente.element, "clientes");
             new Celulas("td", client.telefone, trCliente.element, "clientes");
-            new Stats(client.stats, trCliente.element)
-            // Colocar botão de excluir;
+            new Stats(client.stats, trCliente.element);
+            new ButtonExcluir(trCliente.element, valorButton);
+            valorButton += 1;
             table.element.appendChild(trCliente.element);
         };
         const body = document.getElementById("comeco");
