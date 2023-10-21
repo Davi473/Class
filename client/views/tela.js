@@ -16,8 +16,13 @@ class Tela {
         this.tabela();
     }
 
+    adicionarClientes() {
+        const divAdicionar = new Div("adicionar")
+        const tableadicionar = new Table()
+    }
+
     tabela() {
-        const divtabela = new Div("valor");
+        const divtabela = new Div("clientes");
         const table = new Table("table-clientes");
         const valores = new Tr("clientes");
         table.element.appendChild(valores.element);

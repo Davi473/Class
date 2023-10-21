@@ -8,12 +8,16 @@ class Stats {
         this.option.innerText =  valor;
         this.select.appendChild(this.option)
         const valoresStats = [
-            "NÃO", "NÃO LIGAR DE NOVO", "LIGAR MAIS TARDE"
+            "Novo", "Não Ligar Mais", "Ligar Mais Tarde"
         ];
         for (const stat of valoresStats) {
-            this.option = document.createElement("option");
+            if (stat === valor) {
+
+            } else {
+                this.option = document.createElement("option");
             this.option.innerText =  stat;
-            this.select.appendChild(this.option)
+            this.select.appendChild(this.option);
+            };
         };
         this.td.appendChild(this.select)
         parent.appendChild(this.td)
