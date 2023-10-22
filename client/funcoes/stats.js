@@ -1,12 +1,23 @@
 class Stats {
 
-    constructor(valor, parent) {
+    constructor(valor, parent, clientes="", id) {
         this.td = document.createElement("td")
-        this.td.id =  "clientes"
+        if (clientes==="Não") {
+
+        } else {
+            this.td.id =  "clientes"
+        }
         this.select = document.createElement("select");
-        this.option = document.createElement("option");
-        this.option.innerText =  valor;
-        this.select.appendChild(this.option)
+        if (clientes==="Não") {
+            this.select.id = id
+        }
+        if (valor==="") {
+
+        } else {
+            this.option = document.createElement("option");
+            this.option.innerText =  valor;
+            this.select.appendChild(this.option);
+        };
         const valoresStats = [
             "Novo", "Não Ligar Mais", "Ligar Mais Tarde"
         ];

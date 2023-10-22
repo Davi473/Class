@@ -12,12 +12,26 @@ class Tela {
         for (const valor of valores)[
             this.valoresClientes.push(valor)
         ];
+        this.adicionarClientes();
         this.tabela();
     }
-    // terminar
+
     adicionarClientes() {
         const divAdicionar = new Div("adicionar")
-        const tableadicionar = new Table()
+        const tableadicionar = new Table("adicionar-clientes")
+        divAdicionar.element.appendChild(tableadicionar.element)
+        const trAdicionar = new Tr("adicionar1")
+        tableadicionar.element.appendChild(trAdicionar.element)
+        new Input("text", trAdicionar.element, "Nome")
+        new Input("text", trAdicionar.element, "Email")
+        new Input("text", trAdicionar.element, "Telefone")
+        const trAdicionar2 = new Tr("adicionar2")
+        tableadicionar.element.appendChild(trAdicionar2.element)
+        new Stats("", trAdicionar2.element, "Não", "stats")
+        new ButtonAdicionar(trAdicionar2.element)
+        
+        const body = document.getElementById("comeco")
+        body.appendChild(divAdicionar.element)
     }
 
     tabela() {
@@ -47,5 +61,5 @@ class Tela {
         };
         const body = document.getElementById("comeco");
         body.appendChild(divtabela.element);
-    }
-}
+    };
+};
