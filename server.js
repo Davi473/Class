@@ -1,3 +1,4 @@
+const { log } = require("console");
 const express = require("express");
 const app = express();
 app.use(express.json());
@@ -14,7 +15,8 @@ app.get("/valoresDosClientes", function (req, res){
 });
 
 app.post("/adicionar", function (req, res) {
-    const lancamento = (req.body);
+    const lancamento = (req.body).valor;
+    console.log(lancamento)
     clientesAdicionados.push(lancamento);
     res.end();
 });
@@ -26,4 +28,4 @@ app.post("/excluir", function (req, res) {
 });
 
 
-app.listen(3000);
+app.listen(2999);

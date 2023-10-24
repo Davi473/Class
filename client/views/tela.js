@@ -4,14 +4,14 @@ class Tela {
         this.init();
     }
 
-    async init() {
-        const site = "http:///localhost:3000/valoresDosClientes";
-        const dados = await fetch(site);
-        const valores = await dados.json();
-        this.valoresClientes = [];
-        for (const valor of valores)[
-            this.valoresClientes.push(valor)
-        ];
+    init() {
+        
+        const valores = new ValoresClientes("http://localhost:2999/valoresDosClientes")
+        this.valoresClientes = valores.get()
+        console.log(this.valoresClientes)
+        for (const c of this.valoresClientes) {
+            console.log(c)
+        }
         this.adicionarClientes();
         this.tabela();
     }

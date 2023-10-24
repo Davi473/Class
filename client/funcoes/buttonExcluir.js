@@ -11,7 +11,7 @@ class ButtonExcluir {
             document.getElementById("adicionar").remove()
             document.getElementById("clientes").remove()
             const valor = idButton
-            fetch("http://localhost:3000/excluir", { method: "post", headers: { "content-type": "application/json" }, body: JSON.stringify({valor})});
+            new ValoresClientes().post(valor, "excluir")
             new Tela()
         }
         this.td.appendChild(this.button)
