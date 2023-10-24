@@ -5,6 +5,7 @@ class ValoresClientes {
     }
 
     async get() {
+        console.log(this.site)
         const site = await fetch(this.site);
         const dados = await site.json();
         this.lista = []
