@@ -1,1 +1,1 @@
-new Cabecalho().init()
+new tableClientes()
