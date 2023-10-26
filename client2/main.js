@@ -1,1 +1,1 @@
-new Tela()
+new Cabecalho().init()
