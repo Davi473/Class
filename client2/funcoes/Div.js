@@ -6,6 +6,6 @@ class Div {
         this.element.id = id
     }
     addNaDiv(parent) {
-        this.element.appendChild(parent)
+       // this.element.appendChild(parent)
     }
 }

@@ -6,8 +6,8 @@ class Cabecalho {
 
     init() {
         const div = new Div("cabecalho")
-        new Valores("http://localhost:2999/valoresDosClientes").get()
-        console.log(this.valoresClientes)
+        const clientes = new Valores("http://localhost:2999/valoresDosClientes").get()
+        div.addNaDiv(clientes)
         for (const c of this.valoresClientes) {
             console.log(c)
         }
