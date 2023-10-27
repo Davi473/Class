@@ -5,8 +5,8 @@ class tableClientes {
 
     init() {
         const div = new Div("cabecalho")
-        constnew Valores("http://localhost:2999/valoresDosClientes").get(div.element)
-        div.element.appendChild()
+        new Valores("http://localhost:2999/valoresDosClientes").get(div.element)
+        //div.element.appendChild()
         const body = document.getElementById("comeco");
         body.appendChild(div.element)
     }
