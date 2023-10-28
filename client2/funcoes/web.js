@@ -1,17 +1,16 @@
-class Valores {
+class Web {
 
-    constructor(valor, parent) {
+    constructor(valor) {
         this.site = valor
-        this.get(parent)
     }
 
-    async get(parent) {
+    async get() {
         const site = await fetch(this.site)
         const valor =  await site.json(site)
+        this.valores = []
         for (const cliente of valor) {
-            this.clientes = new Tr("clientes")
-            new Celulas("td", this.clientes.element, cliente.cliente)
-            parent.appendChild(this.clientes)
+            this.valores.push(cliente)
         }
+        return this.valores
     }
 }
