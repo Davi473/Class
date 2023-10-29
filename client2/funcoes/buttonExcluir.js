@@ -11,7 +11,7 @@ class ButtonExcluir {
             //document.getElementById("adicionar").remove()
             document.getElementById("cabecalho").remove()
             const valor = idButton
-            new Web().post("/excluir", valor)
+            new Web("http://localhost:3000").post("/excluir", valor)
             new tableClientes()
         }
         this.td.appendChild(this.button)

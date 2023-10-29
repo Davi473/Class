@@ -1,7 +1,10 @@
 class Stats {
 
-    constructor(stats="", parent) {
+    constructor(stats="", parent, id="") {
         const select = document.createElement("select")
+        if (id==="") {} else {
+            select.id = id
+        }
         if (stats==="") {} else {
             const option = document.createElement("option")
             option.innerText = stats

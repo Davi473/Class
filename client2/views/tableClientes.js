@@ -31,7 +31,10 @@ class tableClientes {
             new Celulas("td", trClientes.element, clients.cliente, "tabela")
             new Celulas("td", trClientes.element, clients.email, "tabela")
             new Celulas("td", trClientes.element, clients.telefone, "tabela")
-            new Stats(clients.stats, trClientes.element, "tabela")
+            const td = document.createElement("td")
+            td.id = "tabela"
+            new Stats(clients.stats, td, "tabela")
+            trClientes.element.appendChild(td)
             new ButtonExcluir(trClientes.element, valorButton)
             valorButton += 1;
 
