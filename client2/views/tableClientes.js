@@ -14,8 +14,8 @@ class tableClientes {
 
     cabecalho() {
         const div = new Div("cabecalho")
-        const table = new Table(div.element)
-        const tr = new Tr("", table.element)
+        const table = new Table(div.element, "tabela")
+        const tr = new Tr("tabela", table.element)
         new Celulas("th", tr.element, "Nome", "tabela")
         new Celulas("th", tr.element, "Email", "tabela")
         new Celulas("th", tr.element, "Telefone", "tabela")
