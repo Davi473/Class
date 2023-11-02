@@ -6,8 +6,8 @@ app.use("/", express.static("./client3"));
 
 // varivel dos clientes
 const clientesAdicionados = [
-    {cliente: "Davi Marcos Dorn", email: "davi###@gmail.com", telefone: "47 995####", stats: "Novo"},
-    {cliente: "Fulano", email: "fulano@gmail.com", telefone: "47 7876####", stats: "Ligar Mais Tarde"}
+    {client: "Davi Marcos Dorn", email: "davi###@gmail.com", telephone: "47 995####", stats: "Novo"},
+    {client: "Fulano", email: "fulano@gmail.com", telephone: "47 7876####", stats: "Ligar Mais Tarde"}
 ];
 
 app.get("/valoresDosClientes", function (req, res){
