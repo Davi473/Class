@@ -2,7 +2,7 @@ const { log } = require("console");
 const express = require("express");
 const app = express();
 app.use(express.json());
-app.use("/test3", express.static("./client3"));
+app.use("/", express.static("./client3"));
 
 // varivel dos clientes
 const clientesAdicionados = [
