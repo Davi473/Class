@@ -24,16 +24,8 @@ class tableClients {
         // table clients
         const valueClients = await new Web("/valoresDosClientes").get()
         for (const value of valueClients) {
-            const divClients = new Div("clients")
-            table.element.appendChild(divClients.element)
-            const trClients = new Tr()
-            divClients.element.appendChild(trClients.element)
-            const divTd = new Div("clients")
-            trClients.element.appendChild(divTd.element)
-            new Celulas("td", value.client, divTd.element)
-            new Celulas("td", value.email, divTd.element)
-            new Celulas("td", value.telephone, divTd.element)
-            new Celulas("td", value.stats, divTd.element)
+            
+        
         }
 
         
